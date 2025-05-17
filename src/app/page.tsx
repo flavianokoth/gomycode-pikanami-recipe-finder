@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { HeroSection } from "../components/home/HeroSection";
 
 export default function HomePage() {
