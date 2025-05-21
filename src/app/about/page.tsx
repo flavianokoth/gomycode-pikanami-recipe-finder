@@ -1,4 +1,4 @@
-// components/AboutSection.tsx
+'use client';
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,7 +15,7 @@ const AboutSection: React.FC = () => {
             cooking simple, fun, and accessible to everyone.
           </p>
           <p className="text-lg text-gray-700 mb-6">
-            Whether you're a beginner or a seasoned chef, our collection of
+            Whether you&apos;re a beginner or a seasoned chef, our collection of
             curated recipes, cooking tips, and nutritional guides are here to
             support your culinary journey.
           </p>
@@ -35,6 +35,7 @@ const AboutSection: React.FC = () => {
             alt="Chef"
             fill
             className="object-cover rounded-none"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
       </div>
