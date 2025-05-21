@@ -1,13 +1,19 @@
 import { HeroSection } from "../components/home/HeroSection";
+import RecipeDataSection from "../components/home/RecipeDataSection";
+import RecipeTypesSection from "../components/home/RecipeTypesSection";
+import AboutSection from "./about/page";
 
 export default function HomePage() {
   return (
-    <div className="border border-red-600 flex flex-col">
+    <div>
       {/* Hero Section */}
       <HeroSection />
-      <section className="bg-blue-300">
-        <div className="background-image: url('/favicon.png') bg-cover bg-center bg-no-repeat h-screen "></div>
-      </section>
+      {/* recipeetypesection */}
+      <RecipeTypesSection />
+      {/* recipes section */}
+      <RecipeDataSection />
+      {/* About section */}
+      <AboutSection />
     </div>
   );
 }
