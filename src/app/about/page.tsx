@@ -11,7 +11,7 @@ const AboutSection: React.FC = () => {
         <div>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">About Us</h2>
           <p className="text-lg text-gray-700 mb-4">
-            Welcome to our recipe platform! We’re passionate about making
+            Welcome to our recipe platform! We&apos;re passionate about making
             cooking simple, fun, and accessible to everyone.
           </p>
           <p className="text-lg text-gray-700 mb-6">
