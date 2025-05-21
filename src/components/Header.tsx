@@ -2,10 +2,15 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname(); // <- gets the current route
+
+  // Use "#about" if already on home, otherwise use "/#about"
+  const aboutLink = pathname === '/' ? '#about' : '/#about';
 
   return (
     <header className="bg-white shadow-md py-4">
@@ -28,7 +33,7 @@ export function Header() {
         <nav className="hidden md:flex space-x-6 items-center" aria-label="Main navigation">
           <Link href="/" className="text-gray-600 hover:text-blue-600 transition">Home</Link>
           <Link href="/recipes" className="text-gray-600 hover:text-blue-600 transition">Recipes</Link>
-          <Link href="/#about" className="text-gray-600 hover:text-blue-600 transition">About</Link>
+          <Link href={aboutLink} className="text-gray-600 hover:text-blue-600 transition">About</Link>
         </nav>
 
         {/* Hamburger Button */}
@@ -53,7 +58,7 @@ export function Header() {
         <nav className="space-y-4" aria-label="Mobile navigation">
           <Link href="/" className="block text-gray-600 hover:text-blue-600 transition" onClick={() => setIsMenuOpen(false)}>Home</Link>
           <Link href="/recipes" className="block text-gray-600 hover:text-blue-600 transition" onClick={() => setIsMenuOpen(false)}>Recipes</Link>
-          <Link href="/#about" className="block text-gray-600 hover:text-blue-600 transition" onClick={() => setIsMenuOpen(false)}>About</Link>
+          <Link href={aboutLink} className="block text-gray-600 hover:text-blue-600 transition" onClick={() => setIsMenuOpen(false)}>About</Link>
         </nav>
       </div>
     </header>

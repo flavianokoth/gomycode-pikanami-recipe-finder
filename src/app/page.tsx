@@ -13,7 +13,12 @@ export default function HomePage() {
       {/* recipes section */}
       <RecipeDataSection />
       {/* About section */}
-      <AboutSection />
+      <section id="about" className="py-16">
+  {/* About content here */}
+  <AboutSection />
+</section>
+
+      
     </div>
   );
 }
